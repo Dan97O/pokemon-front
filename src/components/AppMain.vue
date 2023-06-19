@@ -1,9 +1,14 @@
 <script>
+
+import AppHome from '../views/AppHome.vue';
 export default {
-  name: 'AppMain'
+  name: "AppMain",
+  components: { AppHome }
 }
 </script>
-<template></template>
+<template>
+  <AppHome></AppHome>
+</template>
 
 
 <style lang="scss" scoped></style>
