@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import AppHome from './views/AppHome.vue'
 import SinglePokemon from './views/SinglePokemon.vue'
 import NotFound from './views/NotFound.vue'
+import AppRegions from './views/AppRegions.vue'
 
 const router = createRouter({
   history: createWebHistory(),
@@ -12,7 +13,7 @@ const router = createRouter({
       component: AppHome
     },
     {
-      path: '/pokemon/:name',
+      path: '/pokemons/:name',
       name: 'single-pokemon',
       component: SinglePokemon
     },
@@ -20,6 +21,11 @@ const router = createRouter({
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: NotFound
+    },
+    {
+      path: '/region',
+      name: 'regions',
+      component: AppRegions
     },
   ]
 });

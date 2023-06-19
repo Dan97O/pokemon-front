@@ -1,9 +1,10 @@
 <script>
 import axios from 'axios';
+import PokemonCard from '../components/PokemonCard.vue'
 export default {
   name: 'AppHome',
   components: {
-
+    PokemonCard
   },
 
   data() {
@@ -78,9 +79,7 @@ export default {
   <div v-else>
     <div class="row row-cols-3 g-5">
       <div class="col" v-for="pokemon in pokemons">
-        <div class="card">
-          <PokemonCard :pokemon="pokemon" :host="host" :pkmnImg="pkmnImg"></PokemonCard>
-        </div>
+        <PokemonCard :pokemon="pokemon" :host="host" :pkmnImg="pkmnImg"></PokemonCard>
       </div>
     </div>
     <nav aria-label="Page navigation" v-if="pokemons">
